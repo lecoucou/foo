@@ -1,6 +1,6 @@
 广州市第二中学高一8班颜汇杭，有C/C++/Haskell/Perl/Scheme/Common Lisp及算法基础，非常熟悉C标准库（C89），有着很好的编码风格（但是有时候注释写的比较少），还会使用Markdown/HTML撰写文档，熟悉VS/DevC++/Emacs/Vim/Qt Creator，会用Github找各种库，会用Linux(Debian)，英语、数学成绩优异，学习过高等数学。希望能参加信息学竞赛。
 
-以下是一些以前的作品，全部都是完完全全自己实现的，可以点击超链接进入我的博客查看，也可以在下面直接查看：
+以下是一些以前的作品，全部都是完完全全自己实现的，可以点击超链接进入博客查看，也可以在下面直接查看：
 
 
 * **Haskell** [在一个网站上做的题集][H1]
@@ -88,7 +88,7 @@ ans = maximum productLst
 --                                           Necessary. Or you will get some negative numbers.
 ```
 
-大坑。调了我好久，原来是溢出了。
+大坑。调了好久，原来是溢出了。
 
 
 ## 4m以内偶数斐波那契数求和
@@ -170,11 +170,11 @@ answer = sum $ takeWhile (< 1000) [ n | n <- [ 1 .. 999 ],
 # C++11 双链表
 
 
-这个双链表，是我模仿stl的list制作的，只实现了一些基本功能，像merge，transfer这些就没有实现，可以继承一下，用基本操作来自己做外部实现。
+这个双链表，是模仿stl的list制作的，只实现了一些基本功能，像merge，transfer这些就没有实现，可以继承一下，用基本操作来自己做外部实现。
 
-我没有选用stl的[begin,end)迭代器模式，而是使用传统的[head,tail]。不过，为了配合stl算法，我还是加了两个begin()，end()方法，模拟了一下stl容器。模拟的还算及格，至少我可以做类似for (; begin != end; ++begin)这样的事，也可以让我的容器搭配一些stl算法，这在之后的demo里可以看到。不过，我的iterator没有traits，所以不能用于std::sort。
+没有选用stl的[begin,end)迭代器模式，而是使用传统的[head,tail]。不过，为了配合stl算法，还是加了两个begin()，end()方法，模拟了一下stl容器。模拟的还算及格，至少可以类似for (; begin != end; ++begin)这样的事，也可以让容器搭配一些stl算法，这在之后的demo里可以看到。不过，的iterator没有traits，所以不能用于std::sort。
 
-至于模拟的实现，我的方法是让所有越界的迭代器都指向一个预先设定好的内存地址（野指针）。然后用户调用end()方法的时候，就返回指向这个内存地址的迭代器。这样，当我的迭代器越界的时候，就和end()指向的内存地址一样了。
+至于模拟的实现，方法是让所有越界的迭代器都指向一个预先设定好的内存地址（野指针）。然后用户调用end()方法的时候，就返回指向这个内存地址的迭代器。这样，当迭代器越界的时候，就和end()指向的内存地址一样了。
 
 ```
 #pragma once
@@ -388,7 +388,7 @@ void sldc(node<value> **dst, const node<value> *src) { // single list deep copy
 
 # C++ 队列queue容器类
 
-同一时期作品。受到STL的影响，标识符都写得非常短，还喜欢写_impl。namespace jt是我当时的网名。
+同一时期作品。受到STL的影响，标识符都写得非常短，还喜欢写_impl。namespace jt是当时的网名。
 
 ```
 #pragma once
@@ -715,7 +715,7 @@ int main() {
 
 # Eigenmath 二分法与牛顿-拉夫森迭代
 
-第一次写Eigenmath。这是我注释写得最多的一次了。
+第一次写Eigenmath。这是注释写得最多的一次了。
 
 ## 二分法
 
