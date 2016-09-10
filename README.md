@@ -176,7 +176,7 @@ answer = sum $ takeWhile (< 1000) [ n | n <- [ 1 .. 999 ],
 
 至于模拟的实现，方法是让所有越界的迭代器都指向一个预先设定好的内存地址（野指针）。然后用户调用end()方法的时候，就返回指向这个内存地址的迭代器。这样，当迭代器越界的时候，就和end()指向的内存地址一样了。
 
-```
+```C++
 #pragma once
 
 #include <cstddef>
@@ -369,7 +369,7 @@ private:
 
 当时看STL源码，发现都用两个空格作tab，自己也学着做。后来发现看得很累，又改成8个了。
 
-```
+```C++
 template <class value>
 void sldc(node<value> **dst, const node<value> *src) { // single list deep copy
   while (*dst) { // clear
@@ -390,7 +390,7 @@ void sldc(node<value> **dst, const node<value> *src) { // single list deep copy
 
 同一时期作品。受到STL的影响，标识符都写得非常短，还喜欢写_impl。namespace jt是当时的网名。
 
-```
+```C++
 #pragma once
 #include <cstddef>
 #include <stdexcept>
@@ -504,7 +504,7 @@ struct queue<value>::_queue_impl {
 
 同一时期作品。之后觉得抛异常写string麻烦就直接assert(0)了。
 
-```
+```C++
 #pragma once
 #include <cstddef>
 #include <stdexcept>
@@ -611,7 +611,7 @@ struct stack<value>::_stack_impl {
 
 感谢匿名函数！
 
-```
+```C++
 #include <iostream>
 #include <functional>
 
@@ -781,7 +781,7 @@ for(k,1,10^9,                                                   # 无限循环�
 
 简单的穷举。
 
-```
+```C
 /*
  * 阅读代码顺序：从下至上
  */
